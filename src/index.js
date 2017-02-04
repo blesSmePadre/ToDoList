@@ -4,8 +4,14 @@ import { Provider } from 'react-redux';
 import root from './reducers';
 import App from './components/App';
 import configureStore from './store/configureStore';
+import * as types from './constants/FilterTypes';
 
-const store = configureStore();
+const initialState = {
+  visibilityFilter: types.SHOW_ALL,
+  todos: window.__INITIAL_DATA__
+};
+
+const store = configureStore(initialState);
 render(
   <Provider store={store}>
     <App />
