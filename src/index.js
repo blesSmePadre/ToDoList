@@ -5,6 +5,7 @@ import root from './reducers';
 import App from './components/App';
 import configureStore from './store/configureStore';
 import * as types from './constants/FilterTypes';
+import './styles/App.css'
 
 const initialState = {
   visibilityFilter: types.SHOW_ALL,

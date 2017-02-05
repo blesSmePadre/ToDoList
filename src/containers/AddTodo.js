@@ -10,6 +10,12 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const AddTodo = connect(null, mapDispatchToProps)(AddTodoForm);
+const mapStateToProps = (state) => {
+  return {
+    isMarkAllEnabled: state.todos.length > 0
+  }
+}
+
+const AddTodo = connect(mapStateToProps, mapDispatchToProps)(AddTodoForm);
 
 export default AddTodo;

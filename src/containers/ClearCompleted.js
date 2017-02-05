@@ -10,4 +10,19 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(ClearCompleted);
+const isClearAllEnabled = (todos) => {
+  let isEnabled = false;
+  todos.map((item) => {
+    if (item.completed)
+      isEnabled = true;
+  });
+  return isEnabled;
+}
+
+const mapStateToProps = (state) => {
+  return {
+    isEnabled: isClearAllEnabled(state.todos)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ClearCompleted);

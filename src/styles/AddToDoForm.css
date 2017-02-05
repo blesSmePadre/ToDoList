@@ -1,0 +1,27 @@
+.todo-item-add input {
+    height: 40px;
+}
+
+.todo-item-add {
+    margin-bottom: 10px;
+}
+
+.todo-item-add form{
+    display: flex;
+}
+
+.todo-item-add input {
+    width: 367px;
+}
+
+.todo-item-mark-all {
+    align-self: center;
+    text-align: center;
+    width:75px;
+}
+
+.todo-item-mark-all span {
+    font-size: 16px;
+    color: #13bf00;
+    cursor: pointer;
+}

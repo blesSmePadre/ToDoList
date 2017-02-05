@@ -23,7 +23,6 @@ const todos = (state = [], action) => {
       break;
     }
 
-
     case types.MARK_ALL_SUCCESS: {
       console.log('MARK_ALL succeeded')
       var allItemsAreCompleted = true;

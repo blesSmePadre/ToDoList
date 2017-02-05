@@ -1,16 +1,12 @@
 import React, { PropTypes } from 'react';
 
 const Link = ({active, children, onClick}) => {
-  if (active) {
-    return <span>{children}</span>
-  }
-
   return (
-    <a href="#"
+    <span className={active ? 'todo-item-filter-active btn btn-default' : 'btn btn-default'}  
       onClick={e => {
         e.preventDefault();
         onClick();
-      }}> {children} </a>
+      }}> {children} </span>
    )
 }
 

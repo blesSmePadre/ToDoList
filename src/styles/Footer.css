@@ -1,0 +1,41 @@
+.todo-item-footer {
+    margin-top: 10px;
+}
+
+.todo-item-footer span.btn {
+    padding: 2px 11px;
+    font-size: 13px;
+}
+
+.todo-item-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item-filter-active {
+    background-color: #13bf00;
+    color: white;
+    border: none;
+}
+
+.todo-item-filter-active:hover {
+    background-color: #13bf00;
+    color: white;
+    border: none;
+}
+
+.todo-item-filter .btn {
+    margin-right: 5px;
+}
+
+.todo-item-remove-completed .btn {
+    color: #fff;
+    background-color: #e01f31;
+    border: none;
+    padding: 4px 11px;
+}
+
+.todo-item-remove-completed:hover .btn {
+    color: #fff;
+    background-color: #e01f31;
+}

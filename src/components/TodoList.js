@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
 import Todo from './Todo';
+import '../styles/TodoList.css';
 
 const TodoList = ({todos, onTodoClick, onTodoDoubleClick, onTodoEnterKeyPress, onTodoRemoveClick}) => {
   if (todos.length === 0)
-    return <div>Add Todos</div>
+  return <div></div>
   return (
-    <ul>
+    <div className="todo-list-items">
       {
         todos.map(item =>
           <Todo key={item.id}
@@ -16,7 +17,7 @@ const TodoList = ({todos, onTodoClick, onTodoDoubleClick, onTodoEnterKeyPress, o
             onEnterKeyPress={(content) => onTodoEnterKeyPress(item.id, content)}
           />)
       }
-    </ul>
+    </div>
   )
 }
 
